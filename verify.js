@@ -3,7 +3,7 @@
 const Discord = require('discord.js')
 const config = require('./config.json')
 
-const completemsg = `Thank you for agreeing to the rules and code of conduct! You are now a Authorized member of the guild! you now have the role Authorized  \nFeel free to choose what roles you’d like, introduce yourself or check out a our other channels. \n\n**Your unique token is your signature that you have read and understood our rules.**\n`
+const completemsg = `Thank you for agreeing to the rules and code of conduct! You are now a Authorized member of the guild! you now have the role Authorized ✅  \nFeel free to choose what roles you’d like, introduce yourself or check out a our other channels. \n\n**Your unique token is your signature that you have read and understood our rules.**\n`
 
 const shortcode = (n) => {
     const possible = 'ABCDEFGHIJKLMNPQRSTUVWXYZabcdefghjklmnopqrstuvwxyz0123456789'
