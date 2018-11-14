@@ -3,7 +3,7 @@
 const Discord = require('discord.js')
 const config = require('./config.json')
 
-const completemsg = `Thank you for agreeing to the rules and code of conduct! You are now a verified member of the guild! \nFeel free to choose what roles you’d like, introduce yourself or check out a our other channels. \n\n**Your unique token is your signature that you have read and understood our rules.**\n`
+const completemsg = `Thank you for agreeing to the rules and code of conduct! You are now a Authorized member of the guild! you now have the role Authorized  \nFeel free to choose what roles you’d like, introduce yourself or check out a our other channels. \n\n**Your unique token is your signature that you have read and understood our rules.**\n`
 
 const shortcode = (n) => {
     const possible = 'ABCDEFGHIJKLMNPQRSTUVWXYZabcdefghjklmnopqrstuvwxyz0123456789'
@@ -22,7 +22,7 @@ client.on('ready', () => {
 client.on('guildMemberAdd', (member) => {
     if (member.user.bot || member.guild.id !== config.guild) return
     const token = shortcode(8)
-    const welcomemsg = `Welcome to the guild! We hope you find a home here! Check out the \`#general\` channel to make sure that we jive, and as long as our goals are similar, then there’s a place at the table waiting for you. \n\n If you accept the code of conduct, please verify your agreement by replying to **this DM** with the verification phrase: \n\n\`I agree to abide by all rules. My token is ${token}.\`\n\n **This message is case-sensitive, and please include the period at the end! ** \n\nQuestions? Get at a staff member in the server or via DM.`
+    const welcomemsg = `Welcome to Cherry Ice! We are a roleplaying server on discord go check out the\`#general\` channel to make some new friends and roleplay, and as long as our goals are similar, then you should fit in witht he rest of us!. \n\n If you accept the code of conduct, please verify your agreement by replying to **this DM** with the verification phrase: \n\n\`I agree to abide by all rules. My token is ${token}.\`\n\n **This message is case-sensitive, and please include the period at the end! ** \n\nQuestions? Get at a staff member in the server or via DM.`
     console.log(`${member.user.username}#${member.user.discriminator} joined! CODE: "${token}"`)
     member.send(welcomemsg)
     member.user.token = token
