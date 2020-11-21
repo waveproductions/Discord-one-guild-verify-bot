@@ -1,1 +1,1 @@
-worker: python verify.js
+worker: node verify.js
